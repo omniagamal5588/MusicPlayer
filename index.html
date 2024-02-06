@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Websitet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="topBar">
+            <i class="material-icons"> expand_more </i>
+            <span>Now Playing</span>
+            <i class="material-icons">more_horiz</i>
+        </div>
+        <div class="imgArea">
+            <img src="" alt="img">
+        </div>
+        <div class="songDetails">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+        <div class="progressArea">
+            <div class="progressBar">
+                <audio src="" id="mainAudio"></audio>
+            </div>
+            <div class="songTimer">
+                <span class="currentTime">00:00</span>
+                <span class="maxDuration">00:00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <i id="repeatPlist" class="material-icons" title="Playlist looped"
+            >repeat</i
+          >
+          <i id="prev" class="material-icons">skip_previous</i>
+          <div class="playPause">
+            <i class="material-icons play">play_arrow</i>
+          </div>
+          <i id="next" class="material-icons">skip_next</i>
+          <i class="material-icons">queue_music</i>
+        </div>
+    </div>
+    <!-- javascript files -->
+    <script src="js/main.js"></script>
+    <script src="js/musicList.js"></script>
+</body>
+</html>

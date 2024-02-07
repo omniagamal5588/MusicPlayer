@@ -9,7 +9,7 @@ const container=document.querySelector(".container");
     progressArea = container.querySelector(".progressArea"),
     progressBar = progressArea.querySelector(".progressBar");
 
-let musicIndex =15;
+let musicIndex =0;
 let isPlaying=false;
 window.addEventListener("load",()=>{
     loadMusic(musicIndex);

@@ -1,4 +1,4 @@
-const container=document.querySelector(".container");
+const container=document.querySelector(".container"),
     musicImg=container.querySelector(".imgArea img"),
     musicName=container.querySelector(".songDetails .name"),
     musicArtist=container.querySelector(".songDetails .artist"),
@@ -7,7 +7,9 @@ const container=document.querySelector(".container");
     nextBtn = container.querySelector("#next"),
     mainAudio = container.querySelector("#mainAudio"),
     progressArea = container.querySelector(".progressArea"),
-    progressBar = progressArea.querySelector(".progressBar");
+    progressBar = progressArea.querySelector(".progressBar"),
+    volumeRange = document.getElementById('volume-range'),
+    muteBtn = document.getElementById('mute');
 
 let musicIndex =0;
 let isPlaying=false;

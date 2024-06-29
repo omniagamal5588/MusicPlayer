@@ -95,13 +95,11 @@
     line-height: 35px;
   }
 
- #volume-control button {
+  #volume-control button {
     background: none;
     border: none;
     cursor: pointer;
     position: relative;
-   
-
 
   }
   

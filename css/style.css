@@ -95,11 +95,31 @@
     line-height: 35px;
   }
 
- #volume-control button {
+ #volume-control{
+    position: relative;
+    padding: 10px;
+    top: -53px;
+    left: 100px;
+  }
+  #volume-control input[type="range"] {
+    width: 100px;
+     height: 6px;
+     /* margin: 45px 0px 10px  90px; */
+     accent-color: green;
+  
+    
+    
+
+  }
+  
+  #volume-control button {
     background: none;
     border: none;
     cursor: pointer;
     position: relative;
+   
+
+
   }
   
   #volume-control button i {
@@ -107,7 +127,9 @@
     color: #a2a5a9;
     position: absolute;
     top: -15px;
-    left: 5px;   
+    left: 5px;
+   
+    
   }
   .progressArea {
     height: 6px;

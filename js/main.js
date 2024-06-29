@@ -28,6 +28,20 @@ function playMusic(){
     container.classList.add("paused")
     mainAudio.play();
 }
+
+//volume control
+volumeRange.addEventListener('input', () => {
+    mainAudio.volume = volumeRange.value;
+  });
+  
+  muteBtn.addEventListener('click', () => {
+    mainAudio.muted = !mainAudio.muted;
+    if (mainAudio.muted) {
+      muteBtn.innerHTML = '<i class="material-icons">volume_off</i>';
+    } else {
+      muteBtn.innerHTML = '<i class="material-icons">volume_up</i>';
+    }
+  });
 // pause music
 function pauseMusic(){
     isPlaying=false;

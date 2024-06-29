@@ -95,12 +95,11 @@
     line-height: 35px;
   }
 
-  #volume-control button {
+ #volume-control button {
     background: none;
     border: none;
     cursor: pointer;
     position: relative;
-
   }
   
   #volume-control button i {
@@ -108,9 +107,7 @@
     color: #a2a5a9;
     position: absolute;
     top: -15px;
-    left: 5px;
-   
-    
+    left: 5px;   
   }
   .progressArea {
     height: 6px;

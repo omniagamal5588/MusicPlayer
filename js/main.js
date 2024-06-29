@@ -9,7 +9,7 @@ const container=document.querySelector(".container"),
     progressArea = container.querySelector(".progressArea"),
     progressBar = progressArea.querySelector(".progressBar"),
     volumeRange = document.getElementById('volume-range'),
-    muteBtn = document.getElementById('mute');
+    muteBtn = document.getElementById('mute')
 
 let musicIndex =0;
 let isPlaying=false;

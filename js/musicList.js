@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export let allMusic=[
 {
     name:"ميلاد التغيير",
@@ -95,4 +96,103 @@ export let allMusic=[
     img:"images/16.jpg",
     src:"music/16.mp3",
 },
+=======
+let allMusic=[
+{
+    name:"ميلاد التغيير",
+    artist:"راكان جبر",
+    img:"images/1.jpg",
+    src:"music/1.mp3",
+},
+{
+    name:"اعمارنااعمالنا",
+    artist:"ماهر زين",
+    img:"images/2.jpg",
+    src:"music/2.mp3",
+},
+{
+    name:"العشرة المبشرين بالجنة",
+    artist:"علاء الدين الإسناوي",
+    img:"images/3.jpg",
+    src:"music/3.mp3",
+},
+{
+    name:"سبع طوال انزلت",
+    artist:"عبد الله السلفي",
+    img:"images/4.jpg",
+    src:"music/4.mp3",
+},
+{
+    name:"بالقران اهتديت",
+    artist:"حمود الخضر",
+    img:"images/5.jpg",
+    src:"music/5.mp3",
+},
+{
+    name:"امهات المؤمنين",
+    artist:"عمار صرصر",
+    img:"images/6.jpg",
+    src:"music/6.mp3",
+},
+{
+    name:"محمد",
+    artist:"مشاري راشد العفاسي",
+    img:"images/7.jpg",
+    src:"music/7.mp3",
+},
+{
+    name:"جنة",
+    artist:"ماهر زين",
+    img:"images/8.jpg",
+    src:"music/8.mp3",
+},
+{
+    name:"تاج الوقار",
+    artist:"عمار صرصر",
+    img:"images/9.jpg",
+    src:"music/9.mp3",
+},
+{
+    name:"ذكرينا",
+    artist:"موسي العميرة",
+    img:"images/10.jpg",
+    src:"music/10.mp3",
+},
+{
+    name:"يا حافظ القران",
+    artist:"محمدالمقيط",
+    img:"images/11.jpg",
+    src:"music/11.mp3",
+},
+{
+    name:"هو القران",
+    artist:"ماهر زين",
+    img:"images/12.jpg",
+    src:"music/12.mp3",
+},
+{
+    name:"حلم مبرور",
+    artist:"عمار صرصر",
+    img:"images/13.jpg",
+    src:"music/13.mp3",
+},
+{
+    name:"ما اسعد الحفاظ",
+    artist:"عبدالرحمن الكندري",
+    img:"images/14.jpg",
+    src:"music/14.mp3",
+},
+{
+    name:"سيمر هذا الوقت",
+    artist:"مشاري راشد العفاسي",
+    img:"images/15.jpg",
+    src:"music/15.mp3",
+},
+{
+    name:"بك ملهمي",
+    artist:"ماهر زين و مصطفي جيجيلي",
+    img:"images/16.jpg",
+    src:"music/16.mp3",
+},
+>>>>>>> origin/main
 ]

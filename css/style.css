@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --top-bg: #32373c;
+    --bottom-bg: #636773;
+    --lightblack: #a2a5a9;
+    --white: #f2f2f2;
+    --lightbshadow: rgba(0, 0, 0, 0.15);
+    --main-color: #d7d1c5;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to top, var(--bottom-bg), var(--top-bg) 100%); */
+    padding: 0 15px;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+  }
+  .container {
+    width: 380px;
+    padding: 20px 30px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    /* background: var(--white); */
+    background-color: rgba(0,0,0,.43) ;
+    box-shadow: 0 0 50px rgba(0,0,0,.3);
+    margin: auto;
+  }
+  .container i {
+    cursor: pointer;
+  }
+  .topBar,
+  .progressArea .songTimer,
+  .controls,
+  .musicList .header,
+  .musicList ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .topBar i {
+    font-size: 30px;
+    color: var(--white);
+  }
+  .topBar i:first-child {
+    margin-left: -7px;
+  }
+  .topBar span {
+    font-size: 18px;
+    margin-left: -3px;
+    color: var(--white);
+  }
+  .imgArea {
+    width: 100%;
+    height: 256px;
+    overflow: hidden;
+    margin-top: 25px;
+    border: none;
+    border-radius: 15px;
+    /* box-shadow: 0px 6px 12px var(--lightbshadow); */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.908);
+   
+  }
+  .imgArea img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    background-size: cover;
+    
+  }
+  .songDetails {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--white);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
+  }
+  .song-details p {
+    color: var(--lightblack);
+  }
+  .songDetails .name {
+    font-size:37px;
+  }
+  .songDetails .artist {
+    font-size: 30px;
+    opacity: 0.9;
+    line-height: 30px;
+  }
+
+  #volume-control{
+    position: relative;
+    padding: 10px;
+    top: -53px;
+    left: 100px;
+  }
+  #volume-control input[type="range"] {
+    width: 100px;
+     height: 6px;
+     /* margin: 45px 0px 10px  90px; */
+     accent-color: green;
+  
+    
+    
+
+  }
+  
+  #volume-control button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+   
+
+
+  }
+  
+  #volume-control button i {
+    font-size: 24px;
+    color: #a2a5a9;
+    position: absolute;
+    top: -15px;
+    left: 5px;
+   
+    
+  }
+  .progressArea {
+    height: 6px;
+    width: 100%;
+    border-radius: 50px;
+    background: #b5a4a4;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+  .progressArea .progressBar {
+    height: inherit;
+    width: 0%;
+    position: relative;
+    border-radius: inherit;
+    background: linear-gradient(to right, var(--bottom-bg), var(--top-bg) 100%);
+  }
+  .progressBar::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    top: 50%;
+    right: -5px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: inherit;
+    transition: opacity 0.2s ease;
+  }
+  .progressArea:hover .progressBar::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .progressArea .songTimer {
+    margin-top: 2px;
+  }
+  .songTimer span {
+    font-size: 13px;
+    color: var(--white);
+  }
+  .controls {
+    margin: 40px 0 5px 0;
+  }
+  .controls i {
+    font-size: 28px;
+    color: var(--lightblack);
+    transition: color 0.3s ease;
+  }
+  .controls i:nth-child(2),
+  .controls i:nth-child(4) {
+    font-size: 43px;
+  }
+  .controls #prev {
+    margin-right: -13px;
+  }
+  .controls #next {
+    margin-left: -13px;
+  }
+  .controls .playPause {
+    height: 54px;
+    width: 54px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--lightblack);
+    transition: background 0.3s ease;
+  }
+  .controls .playPause:hover {
+    background: var(--main-color);
+  }
+  
+  .playPause i {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+  }
+  .controls i:hover:not(.playPause i) {
+    color: var(--main-color);
+  }
+  
+  .musicList {
+    position: absolute;
+    background: var(--white);
+    width: 100%;
+    left: 0;
+    bottom: -55%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.15s ease-out;
+  }
+  .musicList.show {
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .header .row {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: var(--lightblack);
+  }
+  .header .row i {
+    cursor: default;
+  }
+  .header .row span {
+    margin-left: 5px;
+  }
+  .header #close {
+    font-size: 22px;
+    color: var(--lightblack);
+  }
+  .musicList ul {
+    margin: 10px 0;
+    max-height: 260px;
+    overflow: auto;
+  }
+  .musicList ul::-webkit-scrollbar {
+    width: 0px;
+  }
+  .musicList ul li {
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: var(--lightblack);
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .music-list ul li:last-child {
+    border-bottom: 0px;
+  }
+  .music-list ul li .row span {
+    font-size: 17px;
+  }
+  .music-list ul li .row p {
+    opacity: 0.9;
+  }
+  ul li .audio-duration {
+    font-size: 16px;
+  }
+  ul li.playing {
+    pointer-events: none;
+    color: var(--bottom-bg);
+  }
+
+  /* #playlist {
+    position: absolute;
+    top: 100%; /* Positioned below the player controls *
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow 
+    display: none;  
+}
+
+#playlist.active {
+    display: block; 
+}
+
+#song-list {
+    list-style: none; /* Remove default bullet points *
+    padding: 0;
+    margin: 0;
+}
+
+#song-list li {
+    padding: 5px 10px;
+    cursor: pointer; /* Make list items clickable *
+}
+
+#song-list li:hover {
+    background-color: #ddd; /* Highlight on hover *
+} */

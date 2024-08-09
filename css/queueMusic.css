@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --top-bg: #32373c;
+    --bottom-bg: #636773;
+    --lightblack: #a2a5a9;
+    --white: #f2f2f2;
+    --lightbshadow: rgba(0, 0, 0, 0.15);
+    --main-color: #d7d1c5;
+    --dark-card-bg: #1e1e1e; /* Dark color for cards */
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 15px;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    color: var(--white);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container Styling */
+.container {
+   width: 440px;
+    max-height: 90vh; /* Ensure the container is scrollable when content overflows */
+    padding: 20px 30px;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,.43);
+    box-shadow: 0 0 50px rgba(0,0,0,.3);
+    margin: auto;
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+/* Scrollbar styles for Webkit browsers (Chrome, Safari) */
+.container::-webkit-scrollbar {
+    width: 12px; /* Increase width of the scrollbar */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--lightblack); /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners for the scrollbar handle */
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: var(--dark-card-bg); /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+/* Header Styling */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: var(--white);
+}
+
+nav a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Main Section */
+main {
+    margin-top: 20px;
+}
+
+/* Music List Styling */
+#music-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.music-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 46, 46, 0.373);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    color: var(--white);
+}
+
+.music-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.music-item div {
+    flex: 1;
+}
+
+.music-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.music-item p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.music-item button {
+    background-color:rgb(223, 175, 16);
+    border: none;
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.music-item button:hover {
+    background-color:rgb(251, 197, 0);
+}
+
+/* Ensure responsiveness and layout consistency */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .music-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .music-item img {
+        margin-bottom: 10px;
+    }
+}
